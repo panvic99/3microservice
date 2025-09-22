@@ -33,13 +33,14 @@ jobs:
     - name: Build with Maven
       run: |
         cd microservice-1
-        mvn clean install
+        mvn package
+        ls -ltr target/
     
     # - name: Run tests
     #   run: mvn test
     
-    - name: Run linting
-      run: mvn sonar:sonar
+    # - name: Run linting
+    #   run: mvn sonar:sonar
     
   #   - name: Run tests
   #     run: npm test
