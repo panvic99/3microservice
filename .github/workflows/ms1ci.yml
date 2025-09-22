@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       uses: actions/setup-java@v4
       with:
-        java-version: '21.0.6' # Specifies the exact Java version
+        java-version: '21.0.2' # Specifies the exact Java version
         distribution: 'microsoft'
         cache: 'maven'
     
