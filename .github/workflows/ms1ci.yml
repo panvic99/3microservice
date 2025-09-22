@@ -35,8 +35,8 @@ jobs:
         cd microservice-1
         mvn clean install
     
-    - name: Run tests
-      run: mvn test
+    # - name: Run tests
+    #   run: mvn test
     
     - name: Run linting
       run: mvn sonar:sonar
