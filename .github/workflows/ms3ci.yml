@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main, develop ]
     paths:
-      - 'microservice-1/**'
+      - 'microservice-3/**'
   pull_request:
     branches: [ main ]
 
@@ -15,12 +15,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        sparse-checkout: 'microservice-1'
+        sparse-checkout: 'microservice-3'
     
     - name: list
       run: |
         ls -ltr
-        cd microservice-1
+        cd microservice-3
         ls -ltr
 
     - name: Install dependencies
@@ -32,7 +32,7 @@ jobs:
     
     - name: Build with Maven
       run: |
-        cd microservice-1
+        cd microservice-3
         mvn package
         ls -ltr target/
 
