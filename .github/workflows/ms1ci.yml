@@ -18,7 +18,10 @@ jobs:
         sparse-checkout: 'microservice-1'
     
     - name: list
-      run: ls -ltr
+      run: |
+        ls -ltr
+        cd microservice-1
+        ls -ltr
 
     - name: Install dependencies
       uses: actions/setup-java@v4
