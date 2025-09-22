@@ -3,6 +3,8 @@ name: CI Pipeline
 on:
   push:
     branches: [ main, develop ]
+    paths:
+      - 'microservice-1/**'
   pull_request:
     branches: [ main ]
 
@@ -12,6 +14,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
+      with:
+        sparse-checkout: 'mircoservice-1'
+        sparse-checkout-cone-mode: false # Optional: Set to false to include only specified paths, not the root
     
     # - name: Set up Node.js
     #   uses: actions/setup-node@v4
